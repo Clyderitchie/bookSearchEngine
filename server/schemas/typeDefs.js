@@ -24,6 +24,8 @@ type Query {
     getAllUsers: [User]
 }
 
-# type Mutation{}
+type Mutation{
+    createUser(username: String, email: String, password: String): User
+}
 
 `;

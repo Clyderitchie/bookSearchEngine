@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {
-  createUser, //Mutation
-  getSingleUser, //Query
+  createUser, //Mutation WORKING
+  getSingleUser, //Query WORKING
   saveBook, //Query
   deleteBook, //Mutation
   login, //Query
@@ -15,7 +15,7 @@ router.route('/').post(createUser).put(authMiddleware, saveBook);
 
 router.route('/login').post(login);
 
-router.route('/me').get(authMiddleware, getSingleUser);
+router.route('/me').get(authMiddleware, getSingleUser); // Query created anc working
 
 router.route('/books/:bookId').delete(authMiddleware, deleteBook);
 

@@ -10,5 +10,9 @@ module.exports = {
         },
        
     },
-    // Mutation: {}
+    Mutation: {
+        createUser: async (_, args) => {
+            return await User.create(args); // Tested in GRAPHQL and working
+        }
+    }
 }
