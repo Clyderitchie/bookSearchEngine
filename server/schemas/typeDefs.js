@@ -21,6 +21,7 @@ type Books {
 
 type Query {
     getSingleUser(userId: ID): User
+    getAllUsers: [User]
 }
 
 # type Mutation{}
